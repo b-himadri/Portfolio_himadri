@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-neutral-50 text-neutral-900 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-yellow-200 text-neutral-900;
+  }
+}
+
+.glass-effect {
+  @apply bg-white/70 backdrop-blur-lg backdrop-saturate-150;
+}
+
+.hover-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-yellow-100/50 hover:-translate-y-1;
+}
+
+.section-heading {
+  @apply relative inline-block font-bold text-4xl md:text-5xl mb-16 after:content-[''] after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-24 after:h-1 after:bg-yellow-300;
+}
+
+.section-wrapper {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32;
+}
+
+.fade-in {
+  @apply opacity-0 animate-[fadeIn_0.6s_ease-out_forwards];
+}
+
+.slide-up {
+  @apply translate-y-8 opacity-0 animate-[slideUp_0.6s_ease-out_forwards];
+}
+
+.slide-right {
+  @apply -translate-x-8 opacity-0 animate-[slideRight_0.6s_ease-out_forwards];
+}
